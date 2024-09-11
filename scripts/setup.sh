@@ -2,12 +2,17 @@
 
 set -e
 
-# echo "Installing Python and other libraries"
+echo "Installing Python and other libraries"
 sudo apt -y install python3.11 python3.11-venv libgl1-mesa-glx nvidia-cuda-toolkit vim
+
+echo "Installing git-lfs"
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
 
 echo "Appending sensible defaults to ~/.bash_aliases"
 # Define the aliases
 ALIASES=$(cat << 'EOF'
+alias ls='ls --color=auto'
 alias ls='ls -Ga'
 alias ll='ls -l'
 alias llrt='ll -rth'
