@@ -12,8 +12,7 @@ sudo apt-get install git-lfs
 echo "Appending sensible defaults to ~/.bash_aliases"
 # Define the aliases
 ALIASES=$(cat << 'EOF'
-alias ls='ls --color=auto'
-alias ls='ls -Ga'
+alias ls='ls -Ga --color=auto'
 alias ll='ls -l'
 alias llrt='ll -rth'
 alias lls='ll -l --block-size=MB'
